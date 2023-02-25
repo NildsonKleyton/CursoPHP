@@ -18,7 +18,7 @@
             </div>
             <div class="center">
                 <?php
-
+                 //Coloque seu conteudo aqui...
                 ?>
             </div>
             <div class="title_lege border_bottom">
