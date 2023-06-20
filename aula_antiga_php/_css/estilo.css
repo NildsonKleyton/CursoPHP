@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+body {
+    background: url(../_imagens/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    font-family: arial, sans-serif;
+    align-items: center;
+
+}
+
+.center {
+    padding: 8px;
+    position: relative;
+    width: 682px;
+    height: 60vh;
+    background-color: #f8f8f8e4;
+    border: 1px solid #ccc;
+    word-wrap: break-word;
+
+}
+
+.center > p {
+    font-style: italic;
+    color: rgb(6, 37, 57);
+}
+
+div h2 {
+    margin: 0px;
+}
+
+p {
+    display: block;
+    margin: 0px;
+    color: rgb(157 188 208);
+}
+
+div p samp {
+    color: rgb(136 156 172);
+}
+
+.title_lege {
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    color: rgb(157 188 208);
+    font-weight: bold;
+    background-color: #2a475c;
+    width: 700px;
+    text-align: center;
+}
+
+.border_top {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.content_wrapper {
+    box-shadow: 3px 3px 0.3px rgb(0 0 0 / 30%);
+    border-radius: 0px 0px 8px 8px;
+    margin: 0%;
+    padding: 0%;
+}
+
+.div_image_php {
+    align-self: flex-start;
+}
+
+.image_php {
+    width: 15em;
+}
+
+.main_content {
+    align-self: center;
+}
+
+.meu-botao {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size:10pt;
+    background-color: rbga(255,255,255,.8);
+}
+
+.meu-botao:hover {
+    background-color: #dddddd;
+}
+
+spaco{
+    display: block;
+    padding: 3px;
+}
+/* Form Fi */
+form{
+    width: 500px;
+    margin: auto;
+}
+
+input,textarea{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 10pt;
+    background-color: rbga(255,255,255,.8);
+
+}
+
+input.border_bottom {
+    border-radius: 0px 0px 8px 8px;
+}
+
+input:hover, textarea:hover{
+    background-color: #dddddd;
+}
+
+
+.nota{
+    width: 2rem;
+    margin-bottom: 3px;
+}
+
+
+legend{
+    color:#888888;
+    font-weight: bold;
+    font-size: 13pt;
+}
+fieldset{
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo{
+    width: 150px;
+}
+
+fieldset#usuatio{
+    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco{
+    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco{
+    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+.destaque{
+    color: red;   
+}
+
+.php{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.php img{
+    height: 28rem;
+    width: 28rem;
+}

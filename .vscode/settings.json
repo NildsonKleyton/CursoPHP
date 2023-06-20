@@ -1,0 +1,4 @@
+{
+    "phpGettersSetters.generatePHPDoc": true,
+    "phpGettersSetters.templatesDir": ""
+}
