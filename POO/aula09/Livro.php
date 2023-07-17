@@ -48,7 +48,7 @@ class Livro implements Publicacao{
     }
     
     public function voltarPag(){
-        if ($this->pagAtual != 0 )
+        if ($this->pagAtual != 1 )
             $this->pagAtual --;
     }
 

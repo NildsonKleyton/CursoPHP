@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/* >>>>> Element <<<<< */
 body {
     background: url(../_imagens/fundo.png);
     background-repeat: no-repeat;
@@ -15,34 +15,101 @@ body {
 
 }
 
+div h2 {
+    margin: 0px;
+}
+
+div p samp {
+    color: rgb(136 156 172);
+}
+
+spaco{
+    display: block;
+    padding: 3px;
+}
+
+pre{
+    white-space: pre-line;
+    margin-top: 0 ;
+}
+
+p{
+    margin: 0px;
+}
+
+
+pre p {
+    display: block;
+    margin: 0px;
+    color: rgb(9, 147, 239);
+}
+
+/* >>>>> Form <<<<< */
+form{
+    width: 500px;
+    margin: auto;
+}
+
+input,textarea{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 10pt;
+    background-color: rbga(255,255,255,.8);
+
+}
+
+input.border_bottom {
+    border-radius: 0px 0px 8px 8px;
+}
+
+input:hover, textarea:hover{
+    background-color: #dddddd;
+}
+
+legend{
+    color:#888888;
+    font-weight: bold;
+    font-size: 13pt;
+}
+fieldset{
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo{
+    width: 150px;
+}
+
+fieldset#usuatio{
+    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco{
+    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco{
+    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+
+/* >>>>> Class <<<<< */
 .center {
-    padding: 8px;
+    padding: 0px 8px ;
+    margin: 0;
     position: relative;
     width: 682px;
     height: 60vh;
     background-color: #f8f8f8e4;
     border: 1px solid #ccc;
     word-wrap: break-word;
-
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .center > p {
     font-style: italic;
     color: rgb(6, 37, 57);
-}
-
-div h2 {
-    margin: 0px;
-}
-
-p {
-    display: block;
-    margin: 0px;
-    color: rgb(157 188 208);
-}
-
-div p samp {
-    color: rgb(136 156 172);
 }
 
 .title_lege {
@@ -90,63 +157,9 @@ div p samp {
     background-color: #dddddd;
 }
 
-spaco{
-    display: block;
-    padding: 3px;
-}
-/* Form Fi */
-form{
-    width: 500px;
-    margin: auto;
-}
-
-input,textarea{
-    font-family: sans-serif;
-    font-weight: normal;
-    font-size: 10pt;
-    background-color: rbga(255,255,255,.8);
-
-}
-
-input.border_bottom {
-    border-radius: 0px 0px 8px 8px;
-}
-
-input:hover, textarea:hover{
-    background-color: #dddddd;
-}
-
-
 .nota{
     width: 2rem;
     margin-bottom: 3px;
-}
-
-
-legend{
-    color:#888888;
-    font-weight: bold;
-    font-size: 13pt;
-}
-fieldset{
-    border-color: #cecece;
-    margin: 20px;
-}
-
-fieldset#sexo{
-    width: 150px;
-}
-
-fieldset#usuatio{
-    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
-}
-
-fieldset#endereco{
-    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
-}
-
-fieldset#endereco{
-    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
 }
 
 .destaque{
