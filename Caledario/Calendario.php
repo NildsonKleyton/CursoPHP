@@ -18,7 +18,7 @@
             </div>
             <div class="center">
                 <?php
-                echo "Mês";
+                echo "Mês / ano;"
 
                 function diaSemana()
                 {
@@ -30,15 +30,19 @@
                     $diaSemana .= "</tr>";
                     return $diaSemana;
                 }
+
                 function mes($valor)
                 {
                     $diaMes = "<tr>";
                     for ($i = 1; $i <= $valor; $i++) {
-                        if ($i % 7 == 0) $diaMes .= "<td> $i </td></tr>";
-                        else $diaMes .= "<td> $i </td>";
+                        if ($i % 7 == 0) 
+                            $diaMes .= "<td> $i </td></tr>";
+                        else
+                            $diaMes .= "<td> $i </td>";
                     }
                     return $diaMes;
                 }
+                
                 echo "<table>" . diaSemana(). mes(31)."</table>";
 
                 ?>
