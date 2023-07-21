@@ -17,8 +17,40 @@
                 <h2>Curso de PHP para iniciantes</h2>
             </div>
             <div class="center">
+                <form method="post">
+                    <label for="mes">Escolha um mês:</label>
+                    <select id="mes" name="mes">
+                        <?php
+                        // Array com os nomes dos meses
+                        $meses = array(
+                            '00' => 'Selecione',
+                            '01' => 'Janeiro',
+                            '02' => 'Fevereiro',
+                            '03' => 'Março',
+                            '04' => 'Abril',
+                            '05' => 'Maio',
+                            '06' => 'Junho',
+                            '07' => 'Julho',
+                            '08' => 'Agosto',
+                            '09' => 'Setembro',
+                            '10' => 'Outubro',
+                            '11' => 'Novembro',
+                            '12' => 'Dezembro'
+                        );
+
+                        foreach ($meses as $numeroMes => $mes) {
+                            $ultimo_dia = date('t', strtotime("{$numeroMes}/1"));
+                            if ($numeroMes <> '00')
+                                echo "<option value=\"$numeroMes\">$mes</option>";
+                            else
+                                echo "<option>$mes </option>";
+                        }
+                        ?>
+                    </select>
+                    <input type="submit" value="Enviar">
+                </form>
                 <?php
-                echo "Mês";
+                echo "Mês ano";
 
                 function diaSemana()
                 {
@@ -39,7 +71,7 @@
                     }
                     return $diaMes;
                 }
-                echo "<table>" . diaSemana(). mes(31)."</table>";
+                echo "<table>" . diaSemana() . mes(31) . "</table>";
 
                 ?>
                 </br></br>
