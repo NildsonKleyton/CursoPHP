@@ -19,9 +19,9 @@
             <div class="center">
                 <form method="post">
                     <label for="mes">Escolha um mês:</label>
-                    <select id="mes" name="mes">
+                    <select name="mes" id="mes">
                         <?php
-                        // Array com os nomes dos meses
+                        // lista com os nomes dos meses
                         $meses = array(
                             '00' => 'Selecione',
                             '01' => 'Janeiro',
@@ -38,43 +38,71 @@
                             '12' => 'Dezembro'
                         );
 
-                        foreach ($meses as $numeroMes => $mes) {
-                            $ultimo_dia = date('t', strtotime("{$numeroMes}/1"));
-                            if ($numeroMes <> '00')
-                                echo "<option value=\"$numeroMes\">$mes</option>";
-                            else
+                        foreach ($meses as $numeroMes => $mes) { // para criar as tags option listando os meses em html
+                            if ($numeroMes <> '00') {
+
+                                echo "<option value=\"$numeroMes\" \name=\"mes\">$mes</option>";
+                            } else {
                                 echo "<option>$mes </option>";
+                            }
                         }
                         ?>
                     </select>
+                    <br>
+                    <label for="ano">Informe o dia</label>
+                    <select name="ano" id="ano">
+                        <?php
+                        echo "<option value=\"\" name=\"ano\"></option>";
+                        for ($i = date("Y") - 100; $i <= date("Y"); $i++) {
+                            echo "<option value=\"$i\" name=\"ano\">$i</option>";
+                        }
+
+                        ?>
+                    </select>
+                    <br>
                     <input type="submit" value="Enviar">
+                    <br><br>
                 </form>
                 <?php
-                
+
+                /**
+                 * Cria o cabeçario do calendario
+                 */
                 function diaSemana()
                 {
-                    $semana = array("Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab");
+                    $semana = array(1 => 'Dom', 2 => 'Seg', 3 => 'Ter', 4 => 'Qua', 5 => 'Qui', 6 => 'Sex', 7 => 'Sab');
                     $diaSemana = "<tr>";
-                    for ($i = 0; $i < count($semana); $i++) {
-                        $diaSemana .= "<th> $semana[$i] </th>";
+                    foreach ($semana as $vl) {
+                        $diaSemana .= "<th> $vl </th>";
                     }
                     $diaSemana .= "</tr>";
                     return $diaSemana;
                 }
 
-                function mes($valor)
+                function diaMes($valor)
                 {
                     $diaMes = "<tr>";
                     for ($i = 1; $i <= $valor; $i++) {
-                        if ($i % 7 == 0) 
-                            $diaMes .= "<td> $i </td></tr>";
+                        if ($i % 7 == 0)
+                            $diaMes .= "<td> $i </td></tr>\n                ";
+
                         else
                             $diaMes .= "<td> $i </td>";
                     }
                     return $diaMes;
                 }
-                echo "<table>" . diaSemana(). mes(31)."</table>";
+                $d =  date('$y-$m-$d');
 
+                if (isset($_POST['mes'])) {
+                    $mesSelecionado = $_POST['mes'];
+                    if ($mesSelecionado != '00') {
+                        $ultimoDiaMes = date('t', strtotime("{$mesSelecionado}/1"));
+                        $mesTitulo = "<tr><td colspan=\"7\" align=\"center\"></td></tr>";
+                        echo "<table>" . $mesTitulo . diaSemana() . diaMes($ultimoDiaMes) . "</table>";
+                    } else {
+                        echo "Por favor, selecione um mês válido.";
+                    }
+                }
                 ?>
                 </br></br>
             </div>
